@@ -9,6 +9,7 @@ cogsworth.shape("turtle")
 cogsworth.penup()
 cogsworth.color("blue")
 cogsworth.pensize(3)
+cogsworth.left(90)
 
 for _ in range(12):
     cogsworth.forward(150)
