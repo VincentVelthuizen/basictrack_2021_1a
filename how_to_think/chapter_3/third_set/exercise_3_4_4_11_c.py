@@ -7,10 +7,10 @@ steps = [(90, side_length), (-90, side_length), (135, roof), (90, roof), (90, 2 
          (135, 2 * roof), (135, side_length)]
 
 screen = turtle.Screen()
-pirate = turtle.Turtle()
+bob = turtle.Turtle()   # the builder
 
 for angle, distance in steps:
-    pirate.left(angle)
-    pirate.forward(distance)
+    bob.left(angle)
+    bob.forward(distance)
 
 screen.exitonclick()
