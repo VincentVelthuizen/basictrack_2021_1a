@@ -1,22 +1,19 @@
-import time
 import turtle
+
+
+def draw_poly(animal, sides, size):
+    for _ in range(sides):
+        animal.forward(size)
+        animal.left(360 / sides)
+
+
+def draw_equitriangle(animal, size):
+    draw_poly(animal, 3, size)
 
 
 screen = turtle.Screen()
 poly = turtle.Turtle()
 
-number_of_revolutions = 20
-for i in range(number_of_revolutions * 4):
-    poly.forward(i * 3)
-    poly.right(90)
-
-# wait for 2 seconds
-time.sleep(2)
-poly.setposition(0, 0)
-screen.clear()
-
-for i in range(number_of_revolutions * 4):
-    poly.forward(i * 3)
-    poly.right(89)
+draw_equitriangle(poly, 150)
 
 screen.exitonclick()
