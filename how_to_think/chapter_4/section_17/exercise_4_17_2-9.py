@@ -36,5 +36,9 @@ test_results.append(day_add("Tuesday", 0) == "Tuesday")
 test_results.append(day_add("Tuesday", 14) == "Tuesday")
 test_results.append(day_add("Sunday", 100) == "Tuesday")
 
+test_results.append(day_add("Sunday", -1) == "Saturday")
+test_results.append(day_add("Sunday", -7) == "Sunday")
+test_results.append(day_add("Tuesday", -100) == "Sunday")
+
 for test, result in enumerate(test_results):
     print("Test", test, "was", result)
