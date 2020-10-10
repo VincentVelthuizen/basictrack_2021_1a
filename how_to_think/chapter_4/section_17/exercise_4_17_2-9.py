@@ -10,11 +10,21 @@ def day_name(day_number):
         return week_days[day_number]
 
 
+def day_num(day_name):
+    if day_name not in week_days:
+        return None
+    else:
+        return week_days.index(day_name)
+
+
 # tests
 test_results = []
 
 test_results.append(day_name(0) == "Sunday")
 test_results.append(day_name(6) == "Saturday")
+
+test_results.append(day_num("Sunday") == 0)
+test_results.append(day_num("Saturday") == 6)
 
 for test, result in enumerate(test_results):
     print("Test", test, "was", result)
