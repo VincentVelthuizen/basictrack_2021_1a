@@ -17,6 +17,11 @@ def day_num(day_name):
         return week_days.index(day_name)
 
 
+def day_add(start_day_name, delta):
+    start_day_num = day_num(start_day_name)
+    return day_name((start_day_num + delta) % len(week_days))
+
+
 # tests
 test_results = []
 
@@ -25,6 +30,11 @@ test_results.append(day_name(6) == "Saturday")
 
 test_results.append(day_num("Sunday") == 0)
 test_results.append(day_num("Saturday") == 6)
+
+test_results.append(day_add("Monday", 4) ==  "Friday")
+test_results.append(day_add("Tuesday", 0) == "Tuesday")
+test_results.append(day_add("Tuesday", 14) == "Tuesday")
+test_results.append(day_add("Sunday", 100) == "Tuesday")
 
 for test, result in enumerate(test_results):
     print("Test", test, "was", result)
