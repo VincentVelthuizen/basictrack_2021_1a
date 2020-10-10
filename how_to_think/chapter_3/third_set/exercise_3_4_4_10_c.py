@@ -1,7 +1,6 @@
 import turtle
 
 steps = [(160, 20), (-43, 10), (270, 8), (-43, 12)]
-days = [(1, "monday"), (2, "tuesday")]
 
 screen = turtle.Screen()
 pirate = turtle.Turtle()

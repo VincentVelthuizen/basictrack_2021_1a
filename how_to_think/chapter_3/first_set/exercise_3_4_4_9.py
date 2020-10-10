@@ -1,6 +1,6 @@
-a = 4
+a = 5
 b = 3
-c = 5
+c = 4
 
 if a > c:
     a, c = c, a     # swap values of a and c so a is smaller than c
