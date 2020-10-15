@@ -12,21 +12,21 @@ but less
 
 
 def remove_punctuation(phrase):
-    phrase_sans_punct = ""
+    phrase_sans_punctuation = ""
     for letter_in_phrase in phrase:
         if letter_in_phrase not in string.punctuation:
-            phrase_sans_punct += letter_in_phrase
-    return phrase_sans_punct
+            phrase_sans_punctuation += letter_in_phrase
+    return phrase_sans_punctuation
 
 
 def count_words(text):
     return len(remove_punctuation(text).split())
 
 
-def count_words_containing(text, letter):
+def count_words_containing(text, letter_to_count):
     count = 0
     for word in remove_punctuation(text).split():
-        if letter in word:
+        if letter_to_count in word:
             count += 1
     return count
 
