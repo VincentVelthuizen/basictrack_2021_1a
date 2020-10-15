@@ -13,9 +13,9 @@ but less
 
 def remove_punctuation(phrase):
     phrase_sans_punct = ""
-    for letter in phrase:
-        if letter not in string.punctuation:
-            phrase_sans_punct += letter
+    for letter_in_phrase in phrase:
+        if letter_in_phrase not in string.punctuation:
+            phrase_sans_punct += letter_in_phrase
     return phrase_sans_punct
 
 
