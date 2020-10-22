@@ -8,7 +8,7 @@ pix = np.array(im)
 maximum = np.max(pix)
 
 # calculate the scaling factor
-scale = 255.0/maximum
+scale = 255.0 / maximum
 
 # create the new 2D array with list comprehension
 new_pix = [[pixel * scale for pixel in row] for row in pix]

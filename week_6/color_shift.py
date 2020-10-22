@@ -2,7 +2,7 @@ from PIL import Image
 import numpy as np
 
 # open the image to be accessed using 'im'
-im = Image.open("fruit_fade.png")
+im = Image.open("fruit_fade_2.png")
 # convert the image to a numpy array called 'pix'
 pix = np.array(im)
 
@@ -24,4 +24,5 @@ new_pix = np.array(new_pix).astype('uint8')
 # convert the array into an image
 im2 = Image.fromarray(new_pix)
 # show the new image
-im2.show()
+# im2.show()
+im2.save("fruit_fade_2.png")

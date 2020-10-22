@@ -26,6 +26,7 @@ def fade_color(image):
     return new_image
 
 
-im = Image.open("fruit.jpg")
-im2 = fade_bw(im)
-im2.save("fruit_fade.png", "PNG")
+if __name__ == "__main__":
+    im = Image.open("fruit.jpg")
+    im2 = fade_bw(im)
+    im2.save("fruit_fade.png", "PNG")

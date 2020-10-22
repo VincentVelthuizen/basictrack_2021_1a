@@ -30,7 +30,7 @@ for word in word_count.keys():
 
 # print to output file
 with open("alice_words.txt", "w") as alice_output:
-    string_format = "{:<" + str(len(longest_word)) + "} {:<5}\n"
+    string_format = "{:<" + str(len(longest_word)) + "} {:>5}\n"
 
     alice_output.write(string_format.format("Word", "Count"))
     alice_output.write("=" * (len(longest_word) + 6) + "\n")
