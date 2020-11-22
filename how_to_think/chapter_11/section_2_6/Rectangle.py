@@ -1,3 +1,6 @@
+from how_to_think.chapter_11.section_1_12.Point import Point
+
+
 class Rectangle:
     """ A class to manufacture rectangle objects """
 
@@ -28,3 +31,7 @@ class Rectangle:
 
     def flip(self):
         self.width, self.height = self.height, self.width
+
+    def contains(self, point):
+        return self.corner.x <= point.x < self.corner.x + self.width and \
+               self.corner.y <= point.y < self.corner.y + self.height
