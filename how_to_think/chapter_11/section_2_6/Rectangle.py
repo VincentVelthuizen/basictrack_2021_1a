@@ -35,3 +35,21 @@ class Rectangle:
     def contains(self, point):
         return self.corner.x <= point.x < self.corner.x + self.width and \
                self.corner.y <= point.y < self.corner.y + self.height
+
+    def corners(self):
+        corners = [self.corner,
+                   Point(self.corner.x + self.width, self.corner.y),
+                   Point(self.corner.x, self.corner.y + self.height),
+                   Point(self.corner.x + self.width, self.corner.y + self.height)]
+        return corners
+
+    def collides_with(self, other_rectangle):
+        collides = False
+
+        for corner in self.corners():
+            collides |= other_rectangle.contains(corner)
+
+        for corner in other_rectangle.corners():
+            collides |= self.contains(corner)
+
+        return collides
