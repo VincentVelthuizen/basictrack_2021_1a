@@ -25,3 +25,6 @@ class Rectangle:
 
     def perimeter(self):
         return 2 * (self.width + self.height)
+
+    def flip(self):
+        self.width, self.height = self.height, self.width
