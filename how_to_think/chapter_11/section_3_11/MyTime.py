@@ -24,5 +24,8 @@ class MyTime:
     def __add__(self, other):
         return MyTime(0, 0, self.to_seconds() + other.to_seconds())
 
+    def __gt__(self, other):
+        return self.after(other)
+
     def __str__(self):
         return "{:0>2d}:{:0>2d}:{:0>2d}".format(self.hours, self.minutes, self.seconds)
