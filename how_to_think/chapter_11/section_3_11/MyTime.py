@@ -21,6 +21,15 @@ class MyTime:
     def between(self, t1, t2):
         return self.after(t1) and t2.after(self)
 
+    def increment(self, seconds):
+        total_seconds = self.to_seconds() + seconds
+
+        self.hours = total_seconds // 3600
+        self.minutes = (total_seconds % 3600) // 60
+        self.seconds = total_seconds % 60
+
+        return self
+
     def __add__(self, other):
         return MyTime(0, 0, self.to_seconds() + other.to_seconds())
 
