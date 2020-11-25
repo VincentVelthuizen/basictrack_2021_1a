@@ -8,7 +8,6 @@ screen = turtle.Screen()
 for i in range(50):
     ninja.forward(i * 2)
     ninja.left(90)
-
-print(ninja.odo_meter)
+    print(ninja.odo_meter)
 
 screen.exitonclick()
