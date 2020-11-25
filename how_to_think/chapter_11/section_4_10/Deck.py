@@ -27,6 +27,14 @@ class Deck:
     def is_empty(self):
         return self.cards == []
 
+    def deal(self, hands, num_cards=None):
+        if num_cards is None or num_cards > len(self.cards):
+            num_cards = len(self.cards)
+
+        num_hands = len(hands)
+        for index, card in enumerate(self.cards):
+            hands[index % num_hands].add(card)
+
     def __str__(self):
         s = ""
 
