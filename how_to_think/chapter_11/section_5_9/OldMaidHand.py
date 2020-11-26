@@ -4,7 +4,7 @@ from how_to_think.chapter_11.section_5_9.Hand import Hand
 
 class OldMaidHand(Hand):
 
-    def remove_matches(self):
+    def remove_matches(self) -> int:
         count = 0
         original_cards = self.cards[:]
         for card in original_cards:

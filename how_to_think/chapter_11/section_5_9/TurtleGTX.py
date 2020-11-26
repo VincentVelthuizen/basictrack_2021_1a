@@ -9,7 +9,7 @@ class TurtleGTX(Turtle):
         self.odo_meter = 0
         self.broken_down = False
 
-    def jump(self, distance):
+    def jump(self, distance) -> None:
         pen = self.isdown()
         self.penup()
         self.forward(distance)
