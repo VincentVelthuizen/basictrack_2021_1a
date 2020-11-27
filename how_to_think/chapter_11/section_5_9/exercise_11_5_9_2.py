@@ -6,8 +6,11 @@ ninja = TurtleGTX()
 screen = turtle.Screen()
 
 for i in range(50):
-    ninja.forward(i * 2)
-    ninja.left(90)
-    print(ninja.odo_meter)
+    try:
+        ninja.forward(i * 2)
+        ninja.left(90)
+    except AssertionError:
+        print("Changed the tyre at", ninja.odo_meter)
+        ninja.change_tyre()
 
 screen.exitonclick()

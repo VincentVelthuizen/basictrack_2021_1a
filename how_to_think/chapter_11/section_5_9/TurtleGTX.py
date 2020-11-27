@@ -27,3 +27,4 @@ class TurtleGTX(Turtle):
 
     def change_tyre(self):
         self.broken_down = False
+        self.odo_meter = 0
