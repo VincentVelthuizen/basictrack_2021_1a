@@ -13,7 +13,4 @@ for element in range(12):
         leonardo.forward(50)
     leonardo.left(30)
 
-
-
-
 paper.exitonclick()
