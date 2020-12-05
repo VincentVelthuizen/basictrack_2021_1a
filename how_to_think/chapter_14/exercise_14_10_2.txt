@@ -1,0 +1,2 @@
+On line 25 of the duke sprite the width was determined as the whole spritesheet.
+It should (just) be the width of a single image (50).

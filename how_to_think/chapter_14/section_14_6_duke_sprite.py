@@ -22,7 +22,7 @@ class DukeSprite:
     def contains_point(self, point):
         """ Return True if my sprite (rectangle) contains point """
         my_x, my_y = self.position
-        my_width = self.image.get_width()
+        my_width = 50
         my_height = self.image.get_height()
         x, y = point
         return my_x <= x < (my_x + my_width) and my_y <= y < (my_y + my_height)
